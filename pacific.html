@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pacific Reach — Fern Marine NZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{cream:'#F9F7F4',ink:'#1E2328',bronze:'#C8A88A'}}}}</script>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>.leaflet-container{font-family:Inter,sans-serif} .custom-pin{width:16px;height:16px;border-radius:50%;background:#C8A88A;border:2.5px solid #1E2328;box-shadow:0 2px 8px rgba(0,0,0,0.22)} .custom-pin.ink{background:#1E2328;border-color:#C8A88A}</style>
+</head>
+<body class="bg-cream">
+<header id="siteHeader" class="fixed top-4 inset-x-3 md:inset-x-6 z-50">
+  <div class="max-w-[1340px] mx-auto rounded-full bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_8px_32px_rgba(30,35,40,0.08)] px-3 md:px-6 py-2.5 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3"><img src="images/fernmarine_ Logo.png" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white object-contain p-1.5 shadow-sm border border-black/5"/><span class="hidden md:block font-display text-[15px] tracking-[0.14em] font-semibold text-ink">FERN MARINE</span><span class="hidden md:block text-[10px] tracking-widest text-ink/45 -ml-1 mt-1">(NZ) LIMITED</span></a>
+    <nav class="hidden lg:flex items-center gap-7 text-[12.5px] font-medium text-ink/60">
+      <a href="index.html" class="hover:text-ink">Home</a><a href="services.html" class="hover:text-ink">Services</a><a href="pacific.html" class="hover:text-ink text-ink font-semibold">Pacific Reach</a><a href="about.html" class="hover:text-ink">About Us</a><a href="contact.html" class="hover:text-ink">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="mailto:tony@fernmarine.com" class="hidden xl:inline-flex text-xs font-medium text-ink/60 hover:text-ink">tony@fernmarine.com</a>
+      <a href="contact.html" class="hidden lg:inline-flex bg-ink text-white font-semibold px-5 py-2.5 rounded-full text-xs hover:bg-ink/90 transition">Request Technical Support <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 ml-1"></i></a>
+      <a href="contact.html" class="lg:hidden inline-flex bg-ink text-white font-semibold px-4 py-2 rounded-full text-xs">Request</a>
+      <button id="menuBtn" class="lg:hidden w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-black/5 grid place-items-center"><i data-lucide="menu" class="w-4 h-4"></i></button>
+    </div>
+  </div>
+  <div id="mobilePanel" class="hidden max-w-[1340px] mx-auto mt-2 rounded-[20px] bg-white/95 backdrop-blur border border-black/5 p-3 space-y-1">
+    <a href="index.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">Home</a>
+    <a href="services.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">Services</a>
+    <a href="pacific.html" class="flex py-2.5 px-4 rounded-xl bg-ink text-white text-sm">Pacific Reach</a>
+    <a href="about.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">About Us</a>
+    <a href="contact.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">Contact</a>
+  </div>
+</header>
+
+<section class="pt-28 md:pt-36 bg-cream">
+  <div class="max-w-[1320px] mx-auto px-6 md:px-8 grid lg:grid-cols-5 gap-8 items-center">
+    <div class="lg:col-span-3 reveal">
+      <div class="inline-flex items-center gap-2 bg-white border border-black/5 rounded-full px-4 py-1.5 text-[11px] tracking-[0.16em] font-bold text-ink/60"><i data-lucide="map-pinned" class="w-3.5 h-3.5 text-[#C8A88A]"></i> REGIONAL OPERATING PRESENCE</div>
+      <h1 class="font-display text-[34px] md:text-[48px] font-medium tracking-[-0.03em] text-ink leading-none mt-4">Regional Operations &<br/>Pacific Reach</h1>
+      <p class="text-ink/60 leading-7 mt-4 text-[14px]">With marine engineering and superintendent experience gained over more than 20 years with established New Zealand shipping companies, we bring hands-on operational knowledge and technical oversight to keep your fleet safe and reliable.</p>
+      <p class="text-ink/60 leading-7 mt-3 text-[14px]">Through our affiliation with Cook Island General Transport based in Rarotonga, we extend our logistical and technical capability to actively support coastal, offshore, and Pacific island marine operations.</p>
+      <div class="grid grid-cols-3 gap-3 mt-6">
+        <div class="bg-white border border-black/5 rounded-2xl p-4 text-center"><div class="text-xl font-bold text-ink">AKL</div><div class="text-[11px] text-ink/50">Birkenhead<br/>Auckland 0746</div></div>
+        <div class="bg-white border border-black/5 rounded-2xl p-4 text-center flex flex-col justify-center"><i data-lucide="arrow-right" class="w-5 h-5 text-[#C8A88A] mx-auto"></i><div class="text-[11px] text-ink/50 mt-1">Corridor Active</div></div>
+        <div class="bg-white border border-black/5 rounded-2xl p-4 text-center"><div class="text-xl font-bold text-ink">RRO</div><div class="text-[11px] text-ink/50">Avatiu<br/>Rarotonga</div></div>
+      </div>
+    </div>
+    <div class="lg:col-span-2 reveal delay-1">
+      <div class="rounded-[28px] overflow-hidden bg-white border border-black/5 p-4 shadow-[0_16px_40px_rgba(30,35,40,0.08)]">
+        <div class="aspect-[4/3] rounded-2xl bg-[#F3F0EB] border border-black/5 relative overflow-hidden">
+          <div id="mapPacific" class="absolute inset-0 z-0"></div>
+          <div class="absolute top-3 right-3 z-[400] bg-white border border-black/5 rounded-full px-3 py-1 text-[10px] font-bold tracking-widest text-ink shadow-sm">20+ YEARS • DOCUMENTED OPS</div>
+          <div class="absolute bottom-3 left-3 right-3 flex gap-2 z-[400]">
+            <div class="flex-1 bg-white/92 backdrop-blur rounded-xl p-3 border border-black/5 shadow-sm"><div class="text-[10px] tracking-widest font-bold text-ink/40">BASE</div><div class="text-sm font-bold text-ink">Auckland, NZ</div><div class="text-xs text-ink/50">P.O. Box 3473</div></div>
+            <div class="flex-1 bg-white/92 backdrop-blur rounded-xl p-3 border border-black/5 shadow-sm"><div class="text-[10px] tracking-widest font-bold text-ink/40">AFFILIATE</div><div class="text-sm font-bold text-ink">Cook Island General Transport</div><div class="text-xs text-ink/50">Rarotonga</div></div>
+          </div>
+        </div>
+        <div class="mt-4 flex items-center justify-between text-xs text-ink/50"><span class="flex gap-1.5 items-center"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Coastal • Offshore • Island Ops</span><span class="font-mono">LLOYD'S REGISTER DOC</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-12 bg-cream">
+  <div class="max-w-[1320px] mx-auto px-6 md:px-8">
+    <div class="grid md:grid-cols-3 gap-5">
+      <div class="reveal bg-white border border-black/5 rounded-2xl p-6"><i data-lucide="anchor" class="w-6 h-6 text-[#C8A88A]"></i><h4 class="font-semibold text-ink mt-3">Coastal Operations</h4><p class="text-sm text-ink/55 leading-6 mt-2">New Zealand coastal fleet oversight with local knowledge and rapid response.</p></div>
+      <div class="reveal delay-1 bg-white border border-black/5 rounded-2xl p-6"><i data-lucide="waves" class="w-6 h-6 text-[#C8A88A]"></i><h4 class="font-semibold text-ink mt-3">Offshore Support</h4><p class="text-sm text-ink/55 leading-6 mt-2">Technical superintendency for offshore and inter-island trades.</p></div>
+      <div class="reveal delay-2 bg-white border border-black/5 rounded-2xl p-6"><i data-lucide="globe-2" class="w-6 h-6 text-[#C8A88A]"></i><h4 class="font-semibold text-ink mt-3">Pacific Island Logistics</h4><p class="text-sm text-ink/55 leading-6 mt-2">Affiliated support extending reach across the South Pacific corridor.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-black/5 py-8 bg-cream"><div class="max-w-[1320px] mx-auto px-6 md:px-8 flex flex-col md:flex-row gap-4 justify-between text-xs text-ink/45"><div>© <span id="yearNow"></span> Fern Marine (NZ) Limited • P.O. Box 3473, Birkenhead, Auckland 0746</div><div class="flex gap-4"><a href="services.html" class="hover:text-ink">Services</a><a href="pacific.html" class="hover:text-ink">Pacific Reach</a><a href="about.html" class="hover:text-ink">About</a><a href="contact.html" class="hover:text-ink">Contact</a></div></div></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function(){
+  const ak=[-36.8485,174.7633], ro=[-21.2117,200.2244]; // 200.22E = -159.77W unwrapped
+  function arc(a,b,n=64){
+    const pts=[];
+    for(let i=0;i<=n;i++){
+      const t=i/n;
+      const lat=a[0]*(1-t)+b[0]*t;
+      const lng=a[1]*(1-t)+b[1]*t;
+      const h=Math.sin(Math.PI*t)*4.5;
+      pts.push([lat+h, lng]);
+    }
+    return pts;
+  }
+  function init(){
+    const m=L.map('mapPacific',{zoomControl:false, attributionControl:true, dragging:true, scrollWheelZoom:false}).setView([-29, 187], 3);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap contributors', maxZoom:19}).addTo(m);
+    const akIcon=L.divIcon({className:'', html:'<div class="custom-pin ink"></div>', iconSize:[16,16], iconAnchor:[8,8]});
+    const roIcon=L.divIcon({className:'', html:'<div class="custom-pin"></div>', iconSize:[16,16], iconAnchor:[8,8]});
+    L.marker(ak,{icon:akIcon}).addTo(m).bindPopup('<b>Auckland, NZ</b><br/>P.O. Box 3473, Birkenhead');
+    L.marker(ro,{icon:roIcon}).addTo(m).bindPopup('<b>Rarotonga, Cook Islands</b><br/>Cook Island General Transport');
+    L.polyline(arc(ak,ro),{color:'#C8A88A', weight:3, opacity:0.95, dashArray:'10 10', lineCap:'round'}).addTo(m);
+    setTimeout(()=>m.invalidateSize(), 400);
+  }
+  document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+<script src="js/main.js"></script><script src="js/scroll.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>About Us — Fern Marine NZ</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{cream:'#F9F7F4',ink:'#1E2328',bronze:'#C8A88A'}}}}</script>
+<link rel="stylesheet" href="css/style.css"/>
+<script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-cream">
+<header id="siteHeader" class="fixed top-4 inset-x-3 md:inset-x-6 z-50">
+  <div class="max-w-[1340px] mx-auto rounded-full bg-white/60 backdrop-blur-xl border border-white/70 shadow-[0_8px_32px_rgba(30,35,40,0.08)] px-3 md:px-6 py-2.5 flex items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3"><img src="images/fernmarine_ Logo.png" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white object-contain p-1.5 shadow-sm border border-black/5"/><span class="hidden md:block font-display text-[15px] tracking-[0.14em] font-semibold text-ink">FERN MARINE</span><span class="hidden md:block text-[10px] tracking-widest text-ink/45 -ml-1 mt-1">(NZ) LIMITED</span></a>
+    <nav class="hidden lg:flex items-center gap-7 text-[12.5px] font-medium text-ink/60">
+      <a href="index.html" class="hover:text-ink">Home</a><a href="services.html" class="hover:text-ink">Services</a><a href="pacific.html" class="hover:text-ink">Pacific Reach</a><a href="about.html" class="hover:text-ink text-ink font-semibold">About Us</a><a href="contact.html" class="hover:text-ink">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="mailto:tony@fernmarine.com" class="hidden xl:inline-flex text-xs font-medium text-ink/60 hover:text-ink">tony@fernmarine.com</a>
+      <a href="contact.html" class="hidden lg:inline-flex bg-ink text-white font-semibold px-5 py-2.5 rounded-full text-xs hover:bg-ink/90 transition">Request Technical Support <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 ml-1"></i></a>
+      <a href="contact.html" class="lg:hidden inline-flex bg-ink text-white font-semibold px-4 py-2 rounded-full text-xs">Request</a>
+      <button id="menuBtn" class="lg:hidden w-10 h-10 md:w-12 md:h-12 rounded-full bg-white border border-black/5 grid place-items-center"><i data-lucide="menu" class="w-4 h-4"></i></button>
+    </div>
+  </div>
+  <div id="mobilePanel" class="hidden max-w-[1340px] mx-auto mt-2 rounded-[20px] bg-white/95 backdrop-blur border border-black/5 p-3 space-y-1">
+    <a href="index.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">Home</a>
+    <a href="services.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">Services</a>
+    <a href="pacific.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">Pacific Reach</a>
+    <a href="about.html" class="flex py-2.5 px-4 rounded-xl bg-ink text-white text-sm">About Us</a>
+    <a href="contact.html" class="flex py-2.5 px-4 rounded-xl hover:bg-black/5 text-sm">Contact</a>
+  </div>
+</header>
+
+<section class="pt-28 md:pt-36 pb-10 bg-cream">
+  <div class="max-w-[1320px] mx-auto px-6 md:px-8">
+    <div class="reveal max-w-[820px]">
+      <div class="inline-flex items-center gap-2 bg-white border border-black/5 rounded-full px-4 py-1.5 text-[11px] tracking-[0.16em] font-bold text-ink/60">ABOUT US</div>
+      <h1 class="font-display text-[36px] md:text-[52px] font-light tracking-[-0.03em] text-ink leading-none mt-4">Practical. Reliable.<br/><span class="font-medium text-[#C8A88A]">Superintendent-led.</span></h1>
+      <p class="text-ink/60 leading-7 mt-4 text-[14px]">Fern Marine NZ Limited is a premier provider of practical, reliable ship management and marine technical services based in Auckland, New Zealand. We provide superintendent-level oversight, regional operating knowledge, and trusted compliance for vessel owners across New Zealand, the Pacific, and island-based operations.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-5 mt-10">
+      <div class="reveal bg-white border border-black/5 rounded-2xl p-6"><div class="text-3xl font-light text-ink">20+ <span class="text-sm font-semibold text-ink/40">Years</span></div><p class="text-sm text-ink/55 leading-6 mt-2">Marine engineering & superintendent experience with established NZ shipping companies.</p></div>
+      <div class="reveal delay-1 bg-white border border-black/5 rounded-2xl p-6"><i data-lucide="shield-check" class="w-6 h-6 text-[#C8A88A]"></i><h4 class="font-semibold text-ink mt-3">Lloyd's Register DOC</h4><p class="text-sm text-ink/55 leading-6 mt-2">Document of Compliance holder for Dry Cargo Ships.</p></div>
+      <div class="reveal delay-2 bg-white border border-black/5 rounded-2xl p-6"><i data-lucide="handshake" class="w-6 h-6 text-[#C8A88A]"></i><h4 class="font-semibold text-ink mt-3">Pacific Affiliation</h4><p class="text-sm text-ink/55 leading-6 mt-2">Affiliated with Cook Island General Transport, Rarotonga.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pb-16 bg-cream">
+  <div class="max-w-[1320px] mx-auto px-6 md:px-8 grid lg:grid-cols-2 gap-6">
+    <div class="reveal bg-white border border-black/5 rounded-[24px] p-7 md:p-8">
+      <h3 class="font-semibold text-ink text-lg">Our Commitment</h3>
+      <p class="text-sm text-ink/60 leading-7 mt-3">Hands-on operational knowledge and technical oversight to keep your fleet safe, reliable and compliant. No generic consultancy — we bring board-level experience to every voyage, dry-docking and overhaul.</p>
+      <div class="mt-6 space-y-3 text-sm">
+        <div class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#C8A88A]"></i><span class="text-ink/70">Practical vessel operations, not paperwork theater</span></div>
+        <div class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#C8A88A]"></i><span class="text-ink/70">Regional operating knowledge: NZ coastal to Pacific islands</span></div>
+        <div class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-[#C8A88A]"></i><span class="text-ink/70">Trusted compliance & class liaison</span></div>
+      </div>
+    </div>
+    <div class="reveal delay-1 bg-ink rounded-[24px] p-7 md:p-8 text-white">
+      <h3 class="font-semibold text-lg">At a Glance</h3>
+      <div class="mt-5 space-y-4 text-sm">
+        <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/50">Base</span><span class="font-semibold">Birkenhead, Auckland — NZ</span></div>
+        <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/50">P.O. Box</span><span class="font-semibold">P.O. Box 3473, 0746</span></div>
+        <div class="flex justify-between border-b border-white/10 pb-3"><span class="text-white/50">Superintendent Hotline</span><span class="font-semibold">+64 9 4199339</span></div>
+        <div class="flex justify-between"><span class="text-white/50">Mobile Dispatch</span><span class="font-semibold">+64 21 399 134</span></div>
+      </div>
+      <a href="contact.html" class="mt-6 inline-flex w-full justify-center bg-[#C8A88A] hover:bg-[#B9977A] text-white font-semibold py-3 rounded-xl">Get Direct Support</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-black/5 py-8 bg-cream"><div class="max-w-[1320px] mx-auto px-6 md:px-8 flex flex-col md:flex-row gap-4 justify-between text-xs text-ink/45"><div>© <span id="yearNow"></span> Fern Marine (NZ) Limited • P.O. Box 3473, Birkenhead, Auckland 0746</div><div class="flex gap-4"><a href="services.html" class="hover:text-ink">Services</a><a href="pacific.html" class="hover:text-ink">Pacific Reach</a><a href="about.html" class="hover:text-ink">About</a><a href="contact.html" class="hover:text-ink">Contact</a></div></div></footer>
+<script src="js/main.js"></script><script src="js/scroll.js"></script>
+</body>
+</html>
